@@ -1,84 +1,184 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>创业公司着陆页</title>
-    <!-- 添加Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
-  </head>
-  <body class="bg-gray-100">
-<header class="bg-green-50 shadow flex justify-center">
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            color: white;
+            height: 50vh;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .hero {
+            background-color: #f0f0f0;
+            padding: 50px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .cta {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+        .cta:hover {
+            background-color: #45a049;
+        } */
 
-      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center">
-          <img src="images/logo.png" alt="公司logo" class="h-12 mx-auto">
+        body {
+            font-family: 'poppins', Arial, sans-serif;
+        }
+        header {
+            height: 80vh;
+        }
+        .header-bg {
+            background-image: url('images/background_image.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .white-logo {
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-green-600 text-white p-5">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="#" class="font-bold text-xl">雪锋创新公司</a>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="hover:text-green-400">主页</a></li>
+                <li><a href="#services" class="hover:text-green-400">服务</a></li>
+                <li><a href="#about" class="hover:text-green-400">关于</a></li>
+                <li><a href="#contact" class="hover:text-green-400">联系我</a></li>
+            </ul>
         </div>
-        <ul class="flex justify-between items-center">
-          <li><a href="#" class="text-gray-800 hover:text-gray-600">主页</a></li>
-          <li class="ml-4"><a href="#" class="text-gray-800 hover:text-gray-600">关于我们</a></li>
-          <li class="ml-4"><a href="#" class="text-gray-800 hover:text-gray-600">服务</a></li>
-          <li class="ml-4"><a href="#" class="text-gray-800 hover:text-gray-600">联系我们</a></li>
-        </ul>
-      </nav>
+    </nav>
+    <header class="header-bg bg-green-600 p-5 text-white text-5xl text-center flex items-center justify-center">
+        <div class="flex flex-col items-center">
+            <img src="images/logo.png" alt="Startup Company Logo" class="w-16 h-16 mx-auto mb-2 white-logo">
+            <div class="font-bold">欢迎来到我的创新公司</div>
+        </div>
     </header>
-    <main class="container mx-auto my-6">
-      <section class="mb-8">
-        <h1 class="text-5xl font-bold text-center">欢迎来到詹雪锋的创业公司</h1>
-        <p class="text-xl text-center mt-4">我们是一家专门提供创新解决方案的公司。我们的专家团队致力于让您的生活更轻松、更高效。<img src="images/welcome.jpg" alt="solution" class="h-96 mx-auto mb-2 float-left"></p>
-        <div class="clear-both"></div>
-        <button class="block mx-auto mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">了解更多</button>
-      </section>
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold text-center">关于我们</h2>
-        <p class="text-xl text-center mt-4">我们的公司成立于2021年，旨在革新人们的生活和工作方式。我们相信技术可以用来解决世界上的许多问题，我们致力于对社会产生积极影响。</p>
-      </section>
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold text-center">我们的服务</h2>
-        <ul class="mt-4 flex justify-between">
-          <li class="text-xl flex flex-col items-center">
-            <img src="images/website.jpg" alt="网站开发" class="h-48 mx-auto mb-2">
-            网站开发<i class="fas fa-check mr-2"></i>
-          </li>
-          <li class="text-xl flex flex-col items-center">
-            <img src="images/mobile.jpg" alt="应用程序开发" class="h-48 mx-auto mb-2">
-            应用程序开发<i class="fas fa-check mr-2"></i>
-          </li>
-          <li class="text-xl flex flex-col items-center">
-            <img src="images/data.jpg" alt="AI应用技术" class="h-48 mx-auto mb-2">
-            AI应用技术<i class="fas fa-check mr-2"></i>
-          </li>
-        </ul>
-      </section>
-      <div class="flex flex-col">
-<!-- Only show announcement input to admin -->
-        <?php if ($isAdmin): ?>
-          <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4" role="alert">
-            <p class="font-bold">公告:</p>
-            <p class="text-sm">最近chatgpt可用网址：http://139.199.4.84:8501/</p>
-          </div>
-        <?php endif; ?>
-        <section class="mb-8">
-        <h2 class="text-2xl font-bold text-center">联系我们</h2>
-        <form class="mt-4">
-          <div class="flex flex-col">
-            <label for="name" class="block text-gray-700 font-bold mb-2">名字:</label>
-            <input type="text" id="name" name="name" class="border rounded py-2 px-3 mb-2" placeholder="请输入您的名字">
-          </div>
-          <div class="flex flex-col">
-            <label for="email" class="block text-gray-700 font-bold mb-2">邮箱:</label>
-            <input type="email" id="email" name="email" class="border rounded py-2 px-3 mb-2" placeholder="请输入您的邮箱">
-          </div>
-          <div class="flex flex-col">
-            <label for="message" class="block text-gray-700 font-bold mb-2">留言:</label>
-            <textarea id="message" name="message" class="border rounded py-2 px-3 mb-2" placeholder="请输入您的留言"></textarea>
-          </div>
-          <button type="submit" class="block mx-auto mt-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">提交</button>
-        </form>
-      </section>
+    <!-- <div class="hero p-12 text-center">
+        <h1 class="text-5xl font-bold mb-5">Welcome to Our Startup</h1>
+        <p class="text-xl max-w-3xl mx-auto mb-5">
+            We are a new and innovative startup company that aims to revolutionize the industry with cutting-edge technology and exceptional customer service. Join us on our journey to make the world a better place!
+        </p>
+        <a href="#" class="cta inline-block text-white bg-green-600 py-3 px-8 rounded text-lg hover:bg-green-500">Get Started</a>
+    </div> -->
+
+    <main class="flex-grow">
+        <div class="hero p-12 text-center">
+            <h1 class="text-5xl font-bold mb-5">欢迎来到雪锋的创新公司</h1>
+            <p class="text-xl max-w-3xl mx-auto mb-5">
+                我们是一家新的创新型创业公司，旨在通过尖端技术和卓越的客户服务彻底改变行业。加入我们的旅程，让世界变得更美好!
+            </p>
+            <a href="#" class="cta inline-block text-white bg-green-600 py-3 px-8 rounded text-lg hover:bg-green-500">从这里开始</a>
+        </div>
+
+<section class="services py-12" id="services">
+            <h2 class="text-3xl font-bold mb-5 text-center">我们的服务</h2>
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded shadow text-center">
+                    <img src="images/services1.jpg" alt="Service 1" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-2xl font-bold mb-2">网站开发</h3>
+                    <p class="text-gray-700">承接网站建设，服务从心开始！</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow text-center">
+                    <img src="images/services2.jpg" alt="Service 2" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-2xl font-bold mb-2">应用开发</h3>
+                    <p class="text-gray-700">电脑应用开发，程序自动化程序开发等.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow text-center">
+                    <img src="images/services3.jpg" alt="Service 3" class="w-full h-48 object-cover mb-4 rounded">
+                    <h3 class="text-2xl font-bold mb-2">AI应用开发</h3>
+                    <p class="text-gray-700">chatgptAI机器人AI技术应用各个领域开发.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add a new section for announcements without affecting the existing layout -->
+<section class="announcements py-6">
+    <div class="container mx-auto">
+        <div class="bg-yellow-200 p-4 rounded shadow text-center">
+            <p class="text-gray-700">我们的网站正在建设中，敬请期待！-----公告：本人制作chatgpt现可用网址：http://139.199.4.84:8501/</p>
+        </div>
+    </div>
+</section>
+        <!-- <div class="contact-us bg-gray-200 py-12">
+            <h2 class="text-3xl font-bold mb-5 text-center">Contact Us</h2>
+            <p class="text-xl text-center mb-5">If you have any questions or concerns, feel free to reach out to us:</p>
+            <div class="flex flex-col items-center space-y-2">
+                <div class="text-lg"><strong>Email:</strong> info@startupcompany.com</div>
+                <div class="text-lg"><strong>Phone:</strong> +1 (123) 456-7890</div>
+                <div class="text-lg"><strong>Address:</strong> 123 Startup St, San Francisco, CA 94105</div>
+            </div>
+        </div> -->
+        
+        <!-- 把contact us的文本更改为一个表单 -->
+        <div class="contact-us bg-gray-200 py-12" id="contact">
+            <h2 class="text-3xl font-bold mb-5 text-center">联系我们</h2>
+            <p class="text-xl text-center mb-5">如果您有任何问题或疑虑，请随时与我们联系:</p>
+            <div class="w-full max-w-md mx-auto">
+                <form action="#" method="POST" class="bg-white p-6 rounded shadow">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">姓名:</label>
+                        <input type="text" name="name" id="name" placeholder="John Doe" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">邮箱:</label>
+                        <input type="email" name="email" id="email" placeholder="example@example.com" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">聊天:</label>
+                        <textarea name="message" id="message" rows="4" placeholder="Type your message here..." class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
     </main>
-    <footer class="bg-green-50 shadow flex justify-center">
-      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <p class="text-gray-800">版权所有 © 2021 -----詹雪锋创业公司  联系邮箱：jiuexika@outlook.com</p>
-      </div>
+
+    <footer class="bg-green-600 text-white text-center py-5">
+        <div class="text-xl mb-3">在社交媒体上关注我们</div>
+        <div class="space-x-4">
+            <a href="#" class="text-2xl hover:text-green-500">Facebook</a>
+            <a href="#" class="text-2xl hover:text-green-500">Twitter</a>
+            <a href="#" class="text-2xl hover:text-green-500">LinkedIn</a>
+            <a href="#" class="text-2xl hover:text-green-500">Instagram</a>
+        </div>
     </footer>
-  </body>
+
+    <div class="copyright bg-green-700 text-white text-center py-3">
+        &copy; 2023雪锋创新公司。版权所有.
+    </div>
+</body>
 </html>
